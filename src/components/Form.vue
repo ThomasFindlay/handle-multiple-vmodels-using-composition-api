@@ -3,7 +3,7 @@
     <div :class="$style.formBlock">
       <label :class="$style.label">Name</label>
       <input
-        v-model="name"
+        v-model="nameState"
         :class="$style.input"
         type="text"
         aria-label="Name input"
@@ -12,7 +12,7 @@
     <div :class="$style.formBlock">
       <label :class="$style.label">Surname</label>
       <input
-        v-model="surname"
+        v-model="surnameState"
         :class="$style.input"
         type="text"
         aria-label="Surname input"
@@ -39,8 +39,8 @@ export default {
   },
   setup(props) {
     return {
-      name: useVModel(props, 'name'),
-      surname: useVModel(props, 'surname'),
+      nameState: useVModel(props, 'name'),
+      surnameState: useVModel(props, 'surname'),
     };
   },
 };
